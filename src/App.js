@@ -1,12 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import { Prodocts } from "./products";
 function App() {
   return (
-    <div className="App">
-      <h1>this is my website task1</h1>
-      <p>this is the solution of the first task</p>
-      <img src="/market.jpg" alt="error" />
+    <div>
+      {Products.map((element) => (
+        <>
+          <h1>{element.name}</h1>
+          <h3>{element.price}</h3>
+          <img src={element.image} width="20%" />
+        </>
+      ))}
     </div>
   );
 }
